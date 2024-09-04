@@ -11,10 +11,7 @@ class Environment:
     }
 
     def __init__(self):
-        try:
-            self.env = os.getenv('ENV')
-        except KeyError:
-            self.env = self.PROD
+        self.env = os.getenv('ENV') or self.DEV
 
     def get_base_url(self):
         if self.env in self.URLS:

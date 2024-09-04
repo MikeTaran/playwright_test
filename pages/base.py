@@ -149,7 +149,7 @@ class Base:
     def switch_to_main_frame(self): #возврат на основной фрейм
         return self.page.main_frame
 
-    def get_element_dropdown_list(self, user_name):
+    def get_element_dropdown_list(self, value_text):
         # Получаем элемент контейнера выпадающего списка
         # p.input("#customersIds", "Test_MT")
         # time.sleep(1)
@@ -159,7 +159,7 @@ class Base:
 
         while not item_found:
             # Ищем нужный элемент
-            item = dropdown_menu.query_selector(f'[title="{user_name}"]')
+            item = dropdown_menu.query_selector(f'[title="{value_text}"]')
 
             if item:
                 item_found = True
