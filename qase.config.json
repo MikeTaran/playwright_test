@@ -1,0 +1,35 @@
+{
+  "mode": "testops",
+  "fallback": "report",
+  "testops": {
+    "project": "HM",
+    "api": {
+      "token": "95508928264a8772532c92f15306d24885e425bed86e65f7db0e09614acdcd0b",
+      "host": "qase.io"
+    },
+    "run": {
+      "title": "Test run title"
+    },
+    "batch": {
+      "size": 100
+    }
+  },
+    "report": {
+    "driver": "local",
+    "connection": {
+      "local": {
+        "path": "./build/qase-report",
+        "format": "json"
+      }
+    }
+  },
+  "framework": {
+    "pytest": {
+      "capture": {
+        "logs": true,
+        "http": true
+      }
+    }
+  },
+  "environment": "local"
+}
