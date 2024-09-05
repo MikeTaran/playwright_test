@@ -8,3 +8,8 @@
     + Регресс: `pytest -m regression`
     + Smoke: `pytest -m smoke`
     + Запуск отдельных тестов: нужно перейти в папку tests командой `cd tests` и запустить нужный тест командой  `pytest -s test_buy_product.py` (пример)
+
+
+### --------------------------------
+playwright codegen https://admin.websitewizard.ru/ --save-storage=auth.json
+playwright codegen --load-storage=auth.json https://admin.websitewizard.ru/
